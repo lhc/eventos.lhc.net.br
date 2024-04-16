@@ -1,0 +1,41 @@
+{
+  "baseurl": "https://eventos.lhc.net.br",
+  "hostname": "eventos.lhc.net.br",
+  "server": {
+    "host": "0.0.0.0",
+    "port": 13120
+  },
+  "log_level": "debug",
+  "log_path": "/data/logs",
+  "db": {
+    "dialect": "sqlite",
+    "storage": "/data/gancio.sqlite",
+    "logging": false,
+    "dialectOptions": {
+      "autoJsonMap": true
+    },
+    "retry": {
+      "match": [
+        null,
+        null,
+        null,
+        {},
+        {}
+      ],
+      "max": 15
+    }
+  },
+  "user_locale": "/data/user_locale",
+  "upload_path": "/data/uploads",
+  "proxy": {
+    "protocol": "",
+    "hostname": "",
+    "host": "",
+    "port": "",
+    "auth": {
+      "username": "",
+      "password": ""
+    },
+    "headers": {}
+  }
+}
