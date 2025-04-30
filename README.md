@@ -9,6 +9,9 @@ If you want to use it in your own organization, you can use this repository and
 [this blog post](https://rennerocha.com/posts/configuring-self-hosted-calendar-for-small-community/)
 as reference. Also, you can keep in touch with LHC members to get more info how to manage it.
 
+You need to install [flyctl](https://fly.io/docs/flyctl/install/) CLI to be able to execute any
+of the tasks described below.
+
 ## Deployment
 
 The application is running in a [fly.io](https://fly.io/) account. If you are planning to upgrade it,
