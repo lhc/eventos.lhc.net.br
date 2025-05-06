@@ -89,8 +89,8 @@ export FLY_SSH_TOKEN=<TOKEN_VALUE>
 ./local_backup.sh
 ```
 
-This script will trigger a remote script that will create a tarball file containing the database and all uploaded
-media located in `/data/` directory.
+This script will create a tarball with the uploaded media assets (under `/data`) and the database files, and store
+it locally in a filename with the pattern `"gancio_data_%DATE_IN_ISO_FORMAT%.tar.gz"`.
 
 ## Upgrading Gancio
 
