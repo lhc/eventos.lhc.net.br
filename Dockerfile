@@ -11,7 +11,7 @@ RUN yarnpkg global add --network-timeout 1000000000 --latest --production --sile
 FROM nodejs-base
 COPY --from=build /usr/local/share/.config/yarn/ /usr/local/share/.config/yarn/
 COPY config.json /config.json
-COPY remote_backup.sh /remote_backup.sh
+COPY backup.sh /backup.sh
 RUN ln -s ../share/.config/yarn/global/node_modules/.bin/gancio /usr/local/bin/gancio
 
 ENTRYPOINT ["/usr/local/bin/gancio"]
