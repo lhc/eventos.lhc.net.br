@@ -1,0 +1,28 @@
+services:
+  gancio:
+    restart: always
+    image: cisti/gancio
+    container_name: gancio
+    environment:
+      - PATH=$PATH:/home/node/.yarn/bin
+      - GANCIO_DATA=/home/node/data
+      - NODE_ENV=production
+      - GANCIO_DB_DIALECT=sqlite
+      - GANCIO_DB_STORAGE=./gancio.sqlite
+    volumes:
+      - ./data:/home/node/data
+    ports:
+      - "13120:13120"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.gancio.tls=true"
+      - "traefik.http.routers.gancio.rule=Host(`eventos.rennerocha.com`)"
+      - "traefik.http.routers.gancio.entrypoints=websecure"
+      - "traefik.http.routers.gancio.tls.certresolver=myresolver"
+    networks:
+      - web
+
+networks:
+  web:
+    external: true
+

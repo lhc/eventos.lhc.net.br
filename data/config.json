@@ -6,10 +6,10 @@
     "port": 13120
   },
   "log_level": "debug",
-  "log_path": "/data/logs",
+  "log_path": "/home/node/data/logs",
   "db": {
     "dialect": "sqlite",
-    "storage": "/data/gancio.sqlite",
+    "storage": "/home/node/data/gancio.sqlite",
     "logging": false,
     "dialectOptions": {
       "autoJsonMap": true
@@ -25,8 +25,8 @@
       "max": 15
     }
   },
-  "user_locale": "/data/user_locale",
-  "upload_path": "/data/uploads",
+  "user_locale": "/home/node/data/user_locale",
+  "upload_path": "/home/node/data/uploads",
   "proxy": {
     "protocol": "",
     "hostname": "",
