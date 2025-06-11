@@ -16,7 +16,7 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.gancio.tls=true"
-      - "traefik.http.routers.gancio.rule=Host(`eventos.rennerocha.com`)"
+      - "traefik.http.routers.gancio.rule=Host(`eventos.lhc.net.br`)"
       - "traefik.http.routers.gancio.entrypoints=websecure"
       - "traefik.http.routers.gancio.tls.certresolver=myresolver"
     networks:
